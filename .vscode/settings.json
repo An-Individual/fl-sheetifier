@@ -3,5 +3,6 @@
         "extension/sheetifier.js": true,
         "extension/sheetifier.js.map": true,
         "node_modules": true,
+        "web-ext-artifacts": true,
     }
 }
