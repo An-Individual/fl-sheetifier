@@ -8,7 +8,7 @@ export class CSVBuilder {
             this.result += ",";
         }
 
-        if(!value){
+        if(!value && value !== 0){
             this.result += `""`;
         }
         else{
