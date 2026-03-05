@@ -8,15 +8,14 @@ export class CSVBuilder {
             this.result += ",";
         }
 
-        if(!value && value !== 0){
-            this.result += `""`;
+        let str;
+        if (value === undefined || value === null) {
+            str = "";
+        } else {
+            str = String(value);
         }
-        else{
-            if(value.replace){
-                value = value.replace("\"", "\"\"");
-            }
-            this.result += `"${value}"`;
-        }
+        str = str.replace(`"`, `""`);
+        this.result += `"${str}"`;
     }
 
     addRow(values) {
