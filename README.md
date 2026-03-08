@@ -1,6 +1,6 @@
 # Fallen London Sheetifier
 
-[Firefox](https://addons.mozilla.org/addon/fallen-london-sheetifier/) / Chrome (TBD)
+[Firefox](https://addons.mozilla.org/addon/fallen-london-sheetifier/) / [Chrome](https://chromewebstore.google.com/detail/fallen-london-sheetifier/kadpkhkbiggfdkjgabebdefaddgagkao)
 
 Sheetifier is a simple browser extension for the game Fallen London that adds a button to the Myself page that lets you save your character data to a CSV file. The export only includes your character's qualities (the contents of the Myself and Possessions tabs). While it primarily contains simple level information the "name" column will include any names you've given to your companions and other game objects.
 
