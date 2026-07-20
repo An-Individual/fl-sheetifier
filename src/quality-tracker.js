@@ -38,6 +38,9 @@ export class QualityTracker {
                     case "onExchange":
                         QualityTracker.onMyself(jsonData);
                         break;
+                    case "agents":
+                        QualityTracker.onAgents(jsonData);
+                        break;
                     default:
                         break;
                 }
@@ -76,6 +79,28 @@ export class QualityTracker {
         if (response.possessionsChanged?.length > 0){
             response.possessionsChanged.forEach(quality => {
                 QualityTracker.qualities[quality.id] = quality;
+            });
+        }
+    }
+
+    static onAgents(response) {
+        if (response.agents?.length > 0) {
+            response.agents.forEach(agent => {
+                QualityTracker.qualities[agent.id] = {
+                    "id": agent.id,
+                    "name": agent.name,
+                    "nameAndLevel": `1 x ${agent.name}`,
+                    "description": agent.description,
+                    "image": agent.image,
+                    "level": 1,
+                    "effectiveLevel": 1,
+                    "nature": "Thing",
+                    "category": "Agents",
+                    "equippable": false,
+                    "allowedOn": "Character",
+                    "himbleLevel": 0,
+                    "progressAsPercentage": -1
+                };
             });
         }
     }

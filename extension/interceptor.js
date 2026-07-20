@@ -36,6 +36,16 @@
             }, "*");
         }
 
+        if(response.currentTarget.responseURL.includes("/api/agents")){
+            window.postMessage({
+                source: source,
+                payload: {
+                    type: "agents",
+                    data: this.response
+                }
+            }, "*");
+        }
+
         if(response.currentTarget.responseURL.includes("/api/exchange/sell")){
             window.postMessage({
                 source: source,
